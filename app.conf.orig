@@ -1,0 +1,11 @@
+# Arquivo de configuração
+# Isso é um comentário
+# Os valores devem estar na mesma linha do atributo
+#   atributo = valor1, valor2, valor3, ...
+# A ordem dos atributos não importa
+
+# nome dos arquivos contendo layouts
+layouts = qwerty.layout, default.layout, novo.layout
+
+# método de varredura padrão
+varredura = linha-coluna

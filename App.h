@@ -10,9 +10,12 @@ class App
 {
 private:
   std::vector<Teclado> teclados;
+  std::string config_file;
 
 public:
   std::vector<std::string> frases;
+  std::vector<std::string> layouts_filenames;
+  std::string metodo_varredura;
 
   App();
 
