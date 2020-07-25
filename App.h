@@ -1,31 +1,15 @@
-#ifndef APP_H
-#define APP_H
-
-#include <iostream>
-#include <vector>
-#include <string>
-#include "Teclado.h"
+#ifndef  APP_H 
+#define  APP_H 
 
 class App
 {
-private:
-  std::vector<Teclado> teclados;
-  std::string config_file;
-
 public:
-  std::vector<std::string> frases;
-  std::vector<std::string> layouts_filenames;
-  std::string metodo_varredura;
-
   App();
+  ~App();
 
-  int run(int argc, char* argv[]);
-  
-  void get_frases(std::string filename);
-  void tempo_frases(Teclado& teclado);
-  void tempo_frases(Teclado& teclado, std::vector<std::string>& frases);
-  void add_teclado(Teclado& teclado);
-  Teclado get_teclado(int i);
+  int run(int argc, char** argv);
 };
 
-#endif // APP_H
+
+#endif //APP_H 
+

@@ -119,7 +119,7 @@ void Teclado::le_arquivo_layout(std::string filename)
   {
     std::string line;
     std::getline(arq_layout, line);
-    if (line.size() == 0) continue;
+    if (line[0] == '#' || line.size() == 0) continue;
     layout.push_back(line);    
   }
   set_layout(layout);
