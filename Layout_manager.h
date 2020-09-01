@@ -26,9 +26,18 @@ public:
   
   // tempo das frases da lista de frases do objeto
   std::vector<float> tempo_frases(Teclado& teclado);
-
   // tempo das frases de uma lista dada pelo usuario
   std::vector<float> tempo_frases(Teclado& teclado, std::vector<std::string>& frases);
+
+  // numero de palavras das frases da lista de frases do objeto
+  std::vector<int> num_palavras_frases(Teclado& teclado);
+  // numero de palavras das frases de uma lista dada pelo usuario
+  std::vector<int> num_palavras_frases(Teclado& teclado, std::vector<std::string>& frases);
+
+  std::vector<int> num_chars_frases(Teclado& teclado);
+  std::vector<int> num_chars_frases(Teclado& teclado, std::vector<std::string>& frases);
+
+
   
   Teclado get_teclado(int i);
   size_t get_num_teclados();

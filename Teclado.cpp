@@ -38,8 +38,11 @@ void Teclado::set_metodo_varredura(std::string _metodo)
   if (_metodo.compare("linha-coluna") == 0) varredura = LINHA_COLUNA;
 }
 
+// nao calcula tempo (tempo=0) para caracteres especiais(!@#$%,.;]{}) e acentos, ou seja,
+// só funciona para letras e nuneros e espaços
 float Teclado::tempo_digitacao_letra(char letra)
 {
+  if (!(letra >= 'a' && letra <= 'z') && !(letra >= 'A' && letra <= 'Z') && !(letra >= '0' && letra <= '9') && letra != ' ') return 0.0f;
   float tempo = 0.0f;
   if (varredura == SEQUENCIAL)
   {
@@ -67,6 +70,7 @@ float Teclado::tempo_digitacao_letra(char letra)
         {
           for (int k=0; k<num_linhas-1; ++k) 
           {
+            // falta adicionar algoritmo da negação de letras
             if (teclas[lin+k][col] == letra) return tempo + k*temporizador;
           }
         }

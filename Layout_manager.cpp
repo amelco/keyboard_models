@@ -134,6 +134,70 @@ std::vector<float> Layout_manager::tempo_frases(Teclado& teclado, std::vector<st
   return result;
 }
 
+std::vector<int> Layout_manager::num_palavras_frases(Teclado& teclado)
+{ 
+  std::vector<int> result;
+  if (frases.size() == 0) 
+  {
+    std::cerr << "Carregue um arquivo de frases" << std::endl;
+    return result;
+  }
+  result = num_palavras_frases(teclado, this->frases); 
+  return result;
+}
+
+std::vector<int> Layout_manager::num_palavras_frases(Teclado& teclado, std::vector<std::string>& frases)
+{
+  std::vector<int> result;
+  for (size_t i=0; i<frases.size(); ++i) 
+  {
+    // Retornar número de palavras da frase atual
+    // Faz isso contando o numero de espaçoes e adicionando 1 (simple por enquanto)
+    int count = 1;
+    for (size_t j=0; j<frases[i].length(); ++j)
+    {
+      if (frases[i][j] == ' ') count++;
+    }
+    //std::cout << count << std::endl;
+    result.push_back(count);
+  }
+  return result;
+}
+
+std::vector<int> Layout_manager::num_chars_frases(Teclado& teclado)
+{ 
+  std::vector<int> result;
+  if (frases.size() == 0) 
+  {
+    std::cerr << "Carregue um arquivo de frases" << std::endl;
+    return result;
+  }
+  result = num_chars_frases(teclado, this->frases); 
+  return result;
+}
+
+std::vector<int> Layout_manager::num_chars_frases(Teclado& teclado, std::vector<std::string>& frases)
+{
+  std::vector<int> result;
+  for (size_t i=0; i<frases.size(); ++i) 
+  {
+    // Retornar número de caracteres da frase atual
+    // Só conta letras e números
+    int count = 0;
+    for (size_t j=0; j<frases[i].length(); ++j)
+    {
+      char letra = frases[i][j];
+      if ((letra >= 'a' && letra <= 'z') || (letra >= 'A' && letra <= 'Z') || (letra >= '0' && letra <= '9') || letra == ' ')
+      {
+        count++;
+      }
+    }
+    //std::cout << count << std::endl;
+    result.push_back(count);
+  }
+  return result;
+}
+
 void Layout_manager::add_teclado(Teclado& teclado)
 {
   teclados.push_back(teclado);
