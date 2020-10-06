@@ -20,5 +20,5 @@ $ ./app
 
 ## TODO
 
-[ ] Adicionar novo sistema de varredura: busca binária (idéia de Paulo)
+[ ] Adicionar novo sistema de varredura: busca binária (idéia de Paulo)  
 [ ] Refatoração para separar os métodos de varredura em uma classe isolada
