@@ -20,4 +20,4 @@ $ ./app
 
 ## TODO
 
-[ ] Adicionar novo sistema de varredura: a) escolhe linha, b) escolhe letra, c) busca binária (idéia de Paulo)
+[ ] Adicionar novo sistema de varredura: busca binária (idéia de Paulo)
