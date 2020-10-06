@@ -1,7 +1,23 @@
-**Compiling**: `g++ -Wall -std=c++11 -O2 Teclado.cpp App.cpp main.cpp -o app`
+# Test Keyboard layouts
 
-**Running**: `./app`
+Programa feito para testar diferentes tipos de layout de teclados para diferentes métodos de escaneamento.
+
+Os layouts de teclados são definidos por arquivos de texto e carregados no arquivo de configuração do programa `app.conf`.
+
+O teste é feito simulando a utilização do teclado na digitação das frases listadas no arquivode configuração `app.conf`.
+
+
+
+## Compilando e executando o programa
+
+```
+$ cd build
+$ cmake ..
+$ make
+$ ./app
+```
+
 
 ## TODO
 
-[ ] Adicionar novo sistema de varredura: a) escolhe linha, b) escolhe letra
+[ ] Adicionar novo sistema de varredura: a) escolhe linha, b) escolhe letra, c) busca binária (idéia de Paulo)
