@@ -1,2 +1,6 @@
 app
 *.swp
+build/app
+build/CM*
+build/cm*
+build/Makefile
