@@ -91,7 +91,7 @@ Layout_manager::Layout_manager() : config_file("app.conf")
   // adiciona os teclados da lista do arquivo de configuração
   for (size_t i=0; i<layouts_filenames.size(); ++i)
   {
-    Teclado teclado;
+    Teclado teclado(metodo_varredura);
     teclado.le_arquivo_layout(layouts_filenames[i]);
     add_teclado(teclado);
   }

@@ -19,8 +19,8 @@ public:
   std::vector<std::string> teclas;
 
   // -=== construtores / destrutor ===-
-  Teclado();
-  Teclado(std::vector<std::string> teclas);
+  Teclado(std::string _varredura);
+  Teclado(std::vector<std::string> _teclas, std::string _varredura);
   ~Teclado();
 
   // -===  métodos ===-

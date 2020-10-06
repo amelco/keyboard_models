@@ -6,16 +6,18 @@
 #include <string>
 
 // constroi teclado com layout padrao
-Teclado::Teclado() : num_linhas(4), num_colunas(13), varredura(LINHA_COLUNA), temporizador(2)
+Teclado::Teclado(std::string _varredura) : num_linhas(4), num_colunas(13), temporizador(2)
 {
-    teclas.push_back(" <XXXXXXXXXXX");
-    teclas.push_back("aeosrindmutcl");
-    teclas.push_back("pvghqbfzjxkwy");
-    teclas.push_back("1234567890,.?");
+  set_metodo_varredura(_varredura);
+
+  teclas.push_back(" <XXXXXXXXXXX");
+  teclas.push_back("aeosrindmutcl");
+  teclas.push_back("pvghqbfzjxkwy");
+  teclas.push_back("1234567890,.?");
 }
 
 // passa o layout do teclado na construção
-Teclado::Teclado(std::vector<std::string> _teclas) : num_linhas(_teclas.size()), num_colunas(_teclas[0].size()), varredura(LINHA_COLUNA), temporizador(2), teclas(_teclas) {}
+Teclado::Teclado(std::vector<std::string> _teclas, std::string _varredura) : num_linhas(_teclas.size()), num_colunas(_teclas[0].size()), varredura(varredura), temporizador(2), teclas(_teclas) {}
 
 Teclado::~Teclado() {}
 
@@ -29,6 +31,7 @@ std::string Teclado::print_propriedades()
   output << "Método varredura:\t";
   if (varredura == LINHA_COLUNA) output << "linha-coluna" << std::endl;
   if (varredura == SEQUENCIAL) output   << "sequencial"   << std::endl;
+  if (varredura == BINARIA) output   << "binaria"   << std::endl;
   return output.str();
 }
 
@@ -36,6 +39,7 @@ void Teclado::set_metodo_varredura(std::string _metodo)
 {
   if (_metodo.compare("sequencial") == 0) varredura = SEQUENCIAL;
   if (_metodo.compare("linha-coluna") == 0) varredura = LINHA_COLUNA;
+  if (_metodo.compare("binaria") == 0) varredura = BINARIA;
 }
 
 // nao calcula tempo (tempo=0) para caracteres especiais(!@#$%,.;]{}) e acentos, ou seja,
