@@ -19,7 +19,7 @@ Layout_manager::Layout_manager() : config_file("app.conf")
     ofile << "# As frases devem estar entre FRASES=ini e FRASES=end\n\n";
     ofile << "# nome dos arquivos contendo layouts\n";
     ofile << "layouts = qwerty.layout, default.layout\n\n";
-    ofile << "# método de varredura padrão\n";
+    ofile << "# método de varredura padrão [linha-coluna, sequencial, binaria]\n";
     ofile << "varredura = linha-coluna\n\n";
     ofile << "FRASES = ini\n";
     ofile << "ola mundo\n";

@@ -77,6 +77,10 @@ float Teclado::tempo_digitacao_letra(char letra)
       }
     }
   }
+  else if (varredura == BINARIA)
+  {
+    return -1;
+  }
   else 
   {
     std::cerr << "Método de varredura inválido" << std::endl;

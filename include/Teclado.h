@@ -8,7 +8,7 @@ class Teclado
 {
 private:
   char null_char = 'X';
-  enum metodo {LINHA_COLUNA, SEQUENCIAL};
+  enum metodo {LINHA_COLUNA, SEQUENCIAL, BINARIA};
 
 public:
   // -=== atributos ===-
