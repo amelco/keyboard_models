@@ -21,9 +21,8 @@ public:
   std::string metodo_varredura;
 
   Layout_manager();
-
   //int run(int argc, char* argv[]);
-  
+
   // tempo das frases da lista de frases do objeto
   std::vector<float> tempo_frases(Teclado& teclado);
   // tempo das frases de uma lista dada pelo usuario
@@ -38,7 +37,7 @@ public:
   std::vector<int> num_chars_frases(Teclado& teclado, std::vector<std::string>& frases);
 
 
-  
+
   Teclado get_teclado(int i);
   size_t get_num_teclados();
   std::string get_frase(int i);

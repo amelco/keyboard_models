@@ -8,7 +8,7 @@ class Teclado
 {
 private:
   char null_char = 'X';
-  enum metodo {LINHA_COLUNA, SEQUENCIAL, BINARIA};
+  enum metodo {LINHA_COLUNA, SEQUENCIAL, BINARIA_SEM_RAIZ, BINARIA_COM_RAIZ, TERNARIA_SEM_RAIZ, TERNARIA_COM_RAIZ};
 
 public:
   // -=== atributos ===-
@@ -17,6 +17,7 @@ public:
   metodo varredura;
   int temporizador;
   std::vector<std::string> teclas;
+  std::string teclas_vetorizadas;
 
   // -=== construtores / destrutor ===-
   Teclado(std::string _varredura);
